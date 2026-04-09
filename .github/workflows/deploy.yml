@@ -26,4 +26,6 @@ jobs:
           pkill -f appli.py || true
           source /home/ubuntu/myproject/venv/bin/activate
           nohup python /home/ubuntu/myproject/appli.py > /home/ubuntu/myproject/app.log 2>&1 &
+          disown
+          sleep 2
           echo "App started!"
