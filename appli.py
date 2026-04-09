@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Phase 1: App is running!"
+    return "Phase 1: ho ho ho ho oh oh oh oh "
 
 @app.route("/health")
 def health():
