@@ -23,9 +23,5 @@ jobs:
         script: |
           cd /home/ubuntu/myproject
           git pull origin main
-          pkill -f appli.py || true
-          source /home/ubuntu/myproject/venv/bin/activate
-          nohup python /home/ubuntu/myproject/appli.py > /home/ubuntu/myproject/app.log 2>&1 &
-          disown
-          sleep 2
-          echo "App started!"
+          sudo systemctl restart appli
+          echo "App restarted!"
