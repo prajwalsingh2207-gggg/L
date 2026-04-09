@@ -24,4 +24,5 @@ jobs:
           git pull origin main
           pkill -f appli.py || true
           source /home/ubuntu/myproject/venv/bin/activate
-          python /home/ubuntu/myproject/appli.py
+          nohup python /home/ubuntu/myproject/appli.py > /home/ubuntu/myproject/app.log 2>&1 &
+          echo "App started!"
